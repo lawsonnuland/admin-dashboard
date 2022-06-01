@@ -11,21 +11,33 @@
 }
 
 .container div {
-    padding: 10px;
+    padding: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .dashboard {
     background-color: orangered;
     grid-row: 1/5;
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: 10% 20% 20% 50%;
 }
 
 .search {
     grid-column: 2/4;
     background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .greeting {
     grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buttons {
+    justify-self: end;
 }
 
 .projects {
@@ -33,14 +45,57 @@
     grid-row: 3/5;
 }
 
+
+.cards{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: antiquewhite;
+    height: 80px;
+    border-radius: 10px;
+    border-left: 5px;
+    border-color: red;
+}
+
+.card p {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 18px;
+}
+
 .announcements {
     background-color: lightgoldenrodyellow;
+}
+
+.announcementcards {
+    background-color: antiquewhite;
+    display: grid;
+    border-radius: 10px;
+    height: 80%;
+}
+
+.announcementcards div p {
+    font-size: 10px;
 }
 
 .trending {
     background-color: lightsalmon;
 }
 
+.trendingpeople {
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
 ul {
     list-style: none;
+}
+
+li {
+    padding-top: 5px;
 }
