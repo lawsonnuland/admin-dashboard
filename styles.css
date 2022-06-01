@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0%;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 20% 55% 25%;
+    grid-template-rows: 10% 10% 40% 40%;
+}
+
+.container div {
+    padding: 10px;
+}
+
+.dashboard {
+    background-color: orangered;
+    grid-row: 1/5;
+}
+
+.search {
+    grid-column: 2/4;
+    background-color: yellow;
+}
+
+.greeting {
+    grid-column: 2/4;
+}
+
+.projects {
+    background-color: orange;
+    grid-row: 3/5;
+}
+
+.announcements {
+    background-color: lightgoldenrodyellow;
+}
+
+.trending {
+    background-color: lightsalmon;
+}
+
+ul {
+    list-style: none;
+}
