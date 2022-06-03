@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0%;
+    text-overflow: hidden;
+}
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
 }
 
 .container {
@@ -11,12 +16,12 @@
 }
 
 .container div {
-    padding: 15px;
+    padding: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .dashboard {
-    background-color: orangered;
+    background-color: #ca8a04;
     grid-row: 1/5;
     display: grid;
     row-gap: 20px;
@@ -25,26 +30,42 @@
 
 .search {
     grid-column: 2/4;
-    background-color: yellow;
+    background-color: #fde047;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.search div {
+    align-content: center;
+}
+
+.user {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profilepic {
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .greeting {
     grid-column: 2/4;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50px 1fr 1fr;
+    background-color: #fde047;
 }
 
 .buttons {
     justify-self: end;
+    align-self: center;
 }
 
 .projects {
-    background-color: orange;
+    background-color: #fef08a;
     grid-row: 3/5;
+    overflow: scroll;
 }
-
 
 .cards{
     display: grid;
@@ -53,30 +74,37 @@
 }
 
 .card {
-    background-color: antiquewhite;
+    background-color: #fefce8;
     height: 80px;
     border-radius: 10px;
     border-left: 5px;
     border-color: red;
+    overflow: scroll;
 }
 
 .card p {
-    font-size: 12px;
+    font-size: max(10px, 80%);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.title {
-    font-size: 18px;
+.card .title {
+    font-size: 16px;
+    font-weight: bold;
+    height: 1em;
 }
 
 .announcements {
-    background-color: lightgoldenrodyellow;
+    background-color: #fef08a;
 }
 
 .announcementcards {
-    background-color: antiquewhite;
+    background-color: #fefce8;
     display: grid;
     border-radius: 10px;
     height: 80%;
+    overflow: scroll;
 }
 
 .announcementcards div p {
@@ -84,12 +112,13 @@
 }
 
 .trending {
-    background-color: lightsalmon;
+    background-color: #fef08a;
 }
 
 .trendingpeople {
-    background-color: antiquewhite;
+    background-color: #fefce8;
     border-radius: 10px;
+    font-size: 10px;
 }
 
 ul {
@@ -98,4 +127,26 @@ ul {
 
 li {
     padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+input {
+    border-radius: 15px;
+    border: 0;
+    width: max(400px, 40%);
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #eab308;
+    font-weight: bold;
+    border: 0px;
+    font-size: 14px;
+    color: rgb(49, 49, 49);
+}
+
+img {
+    float: left;
 }
