@@ -25,18 +25,30 @@
     grid-row: 1/5;
     display: grid;
     row-gap: 20px;
-    grid-template-rows: 10% 20% 20% 50%;
+    grid-template-rows: auto auto 1fr;
 }
 
 .search {
     grid-column: 2/4;
     background-color: #fde047;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search div {
-    align-content: center;
+    width: 40%;
+    align-items: center;
+    display: flex;
+}
+
+.searchright {
+    align-content: flex-end;
+    justify-content: end;
+}
+
+.search div > * {
+    vertical-align: middle;
+    padding: 0px 10px;
 }
 
 .user {
@@ -54,6 +66,7 @@
     display: grid;
     grid-template-columns: 50px 1fr 1fr;
     background-color: #fde047;
+    box-shadow: 5px 5px 5px rgb(0,0,0,.2);
 }
 
 .buttons {
@@ -75,11 +88,11 @@
 
 .card {
     background-color: #fefce8;
-    height: 80px;
+    height: auto;
     border-radius: 10px;
-    border-left: 5px;
     border-color: red;
     overflow: scroll;
+    box-shadow: 5px 5px 5px rgb(0,0,0,.2);
 }
 
 .card p {
@@ -92,7 +105,15 @@
 .card .title {
     font-size: 16px;
     font-weight: bold;
-    height: 1em;
+}
+
+.interact {
+    position: relative;
+    float: right;
+}
+
+.interact:hover, li:hover {
+    transform: scale(1.1);
 }
 
 .announcements {
@@ -105,6 +126,7 @@
     border-radius: 10px;
     height: 80%;
     overflow: scroll;
+    box-shadow: 5px 5px 5px rgb(0,0,0,.2);
 }
 
 .announcementcards div p {
@@ -119,6 +141,14 @@
     background-color: #fefce8;
     border-radius: 10px;
     font-size: 10px;
+    box-shadow: 5px 5px 5px rgb(0,0,0,.2);
+}
+
+.avatar {
+    clip-path: circle();
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 ul {
@@ -128,18 +158,20 @@ ul {
 li {
     padding-top: 5px;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 
 input {
     border-radius: 15px;
     border: 0;
     width: max(400px, 40%);
+    height: 30px;
 }
 
 button {
     margin-left: 10px;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
     background-color: #eab308;
     font-weight: bold;
     border: 0px;
